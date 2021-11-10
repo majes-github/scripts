@@ -37,4 +37,5 @@ sudo umount /mnt
 sudo mount ${device}2 /mnt
 sudo mkdir -p /mnt/home/pi/.ssh
 sudo sh -c 'echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGRzAkPqFQAhytGHR2BWKY8Nq+U8QZk03EnXHJqRlX8VpEOVgR30t4maeegnuHPZuHK9a6zh10dtT7s5AyibR3d85fU3DtU6Zw0Y8QOuGwSe9vVY9I1m7RZmdcNTQqcINtxhOyD/mxM8TD9YS9f0A8IAxFhcT+UMKscROkE0WvwIA2KzsA2TIKTv8hM0SiEfUIwFkXEuZwlR/lVQMytWRicLuvGvW5nZCGYhjm/BhvKIDE6mA5zGfB4LelF1KJT5yhy7El39zxk39z9Xmr1zXvdyV7AQ3EZX70V6zUZQljUTrf3JpRDlObsDGWQXDIOHBkszutnrNEctn6O6hgS11t mj@mini.nr.majes.de" > /mnt/home/pi/.ssh/authorized_keys'
+sudo chown -R 1000:1000 /mnt/home/pi/.ssh
 sudo umount /mnt
