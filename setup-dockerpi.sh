@@ -1,8 +1,6 @@
 #!/bin/sh
 
 # use data partition
-echo ",32G"  | sudo sfdisk --no-reread /dev/sda -N 2
-echo "32G,+" | sudo sfdisk --no-reread /dev/sda --append
 sudo mkdir /daten
 echo -e "LABEL=daten\t/daten\t\text4\tdefaults\t0\t1" | sudo tee -a /etc/fstab
 
