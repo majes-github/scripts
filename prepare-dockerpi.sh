@@ -27,8 +27,8 @@ fi
 which pv >/dev/null || { sudo apt update && sudo apt install -y pv; }
 pv $image | sudo dd of=$device bs=1M
 sleep 3
-echo ",32G"  | sudo sfdisk $device -N 2
-echo "32G,+" | sudo sfdisk $device --append
+echo ",32G"  | sudo sfdisk --force $device -N 2
+echo "32G,+" | sudo sfdisk --force $device --append
 
 sudo mount ${device}1 /mnt
 sudo touch /mnt/ssh
