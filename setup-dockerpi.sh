@@ -17,4 +17,5 @@ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGRzAkPqFQAhytGHR2BWKY8Nq+U8QZk03EnX
 sudo apt update && sudo apt upgrade -y
 curl -sSL https://get.docker.com | sudo sh
 sudo usermod -aG docker pi
-sudo apt install -y docker-compose git screen tcpdump vim
+#sudo apt install -y docker-compose git screen tcpdump vim
+sudo apt install -y git screen tcpdump vim
