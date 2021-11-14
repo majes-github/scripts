@@ -23,11 +23,11 @@ if [ ! -e $PASSWD_FILE ]; then
 fi
 
 hash=$(busybox mkpasswd -m md5 $passwd)
-if grep "^$1:" $PASSWD_FILE; then
+if grep "^$1:" $PASSWD_FILE >/dev/null; then
     # user already exists
     if [ -z "$home" ]; then
 	# do not change homedir
-	home=$(awk -F: { print $6 } $PASSWD_FILE)
+	home=$(awk -F: '{ print $6 }' $PASSWD_FILE)
     fi
     sed -i "/^$1:/s|^\($1:\).*\(:.*:.*::\).*\(:.*\)|\1$hash\2$home\3|" $PASSWD_FILE
 else
